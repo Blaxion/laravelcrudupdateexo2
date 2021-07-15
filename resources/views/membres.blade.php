@@ -20,4 +20,5 @@
             @endforeach
         </tbody>
     </table>
+    <a href="/deleteAllMembre" class="btn btn-danger">Clear All Table</a>
 @endsection

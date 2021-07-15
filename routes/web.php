@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\MembreController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,8 @@ Route::get('/editMembre/{id}', [MembreController::class,'edit']);
 Route::put('/putMembre/{id}', [MembreController::class,'update']);
 // Delete
 Route::delete('/deleteMembre/{id}', [MembreController::class,'destroy']);
+
+Route::get('/deleteAllMembre', function () {
+    DB::table('Membres')->delete();
+    return redirect("/");
+});
