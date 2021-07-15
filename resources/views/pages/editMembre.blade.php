@@ -14,9 +14,8 @@
         </div>
         <div class="mb-3">
             <select class="form-select" name='genre' aria-label="Default select example">
-                <option >Open this select menu</option>
-                <option {{$edit->genre=="Homme"?'Selected':''}} value="Homme">Homme</option>
-                <option {{$edit->genre=="Femme"?'Selected':''}} value="Femme">Femme</option>
+                <option Selected value="{{$edit->genre}}">{{$edit->genre}}</option>
+                <option  value="{{$edit->genre=="Homme"?'Femme':'Homme'}}">{{$edit->genre=="Homme"?'Femme':'Homme'}}</option>
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
